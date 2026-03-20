@@ -41,9 +41,3 @@
 
 > **Examples of Problem Areas to Fix:**
 > ![Drop a screenshot of some hard-to-read text on the live site here as a reminder](placeholder.jpg)
-
----
-
-## 📝 Random Notes for Later (Dev Stuff)
-* When I finalize the colors, I need to make sure the devs use CSS root variables instead of hardcoding hex values everywhere.
-* Need to look up the exact CSS code for the grayscale hover effect if we go with Idea B for the sponsors.
