@@ -1,4 +1,4 @@
-# FEOAF Design Refresh
+# FEOAF Design
 
 *Note: This is just a rough scratchpad for upcoming design changes. Nothing is finalized yet!*
 
