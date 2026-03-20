@@ -1,8 +1,5 @@
 # 🚧 [DRAFT] FEOAF Design Updates & Work-in-Progress Log
 
-**Status:** Actively Updating
-**Last Updated:** March 20, 2026
-
 ---
 
 ## 🎯 Overview
