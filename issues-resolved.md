@@ -1,48 +1,52 @@
-# Design Evolution Documentation: FEOAF Website (Start to Present)
+# 🚧 [DRAFT] FEOAF Design Updates & Work-in-Progress Log
+
+**Status:** Actively Updating
+**Last Updated:** March 20, 2026
 
 ---
 
 ## 🎯 Overview
-This document serves as a comprehensive log of the design changes made to the **FEOAF** website from its initial build to its current state. The overarching journey has focused on building a cohesive brand identity from the ground up, resolving visual friction in key components, and ultimately ensuring the platform is highly accessible to all users. 
+This is a living document tracking the ongoing design improvements for the **FEOAF** website. The current sprint focuses on establishing a cohesive color palette, fixing sponsor logo visibility, and auditing the site for accessibility (color contrast). This document will be updated with final screenshots and developer handoff notes as each phase is completed.
 
 ---
 
-## ✨ Design Evolution & Key Milestones
+## 🛠️ Active Design Sprints
 
-### Phase 1: Establishing the Foundation (Color Palette Design)
-**The Initial Challenge:** The website's original color scheme lacked consistency across different pages and components, which diluted the brand and led to a fragmented user experience.
+### 1. Color Palette Design & Standardization ⏳ *In Progress*
+**The Goal:** The current site lacks a unified color scheme. I am working on defining a strict primary, secondary, and accent color palette to standardize buttons, backgrounds, and typography.
+**Current Tasks:**
+- [ ] Define core brand hex codes.
+- [ ] Map out standard button states (default, hover, active, disabled).
+- [ ] Apply the new hierarchy to a sample page layout.
 
-**The Evolution:** * Defined and implemented a strict primary, secondary, and accent color palette.
-* Standardized button styles, background sections, and typography colors to firmly align with FEOAF's core brand identity. 
-* Established a clear visual hierarchy using these foundational colors to naturally guide the user's eye toward key actions and information.
-
-**Current Implementation:**
-![Updated Color Palette Design](path/to/your/updated-colors.png)
-
-
-### Phase 2: Refining Partner Visibility (Sponsors Logo Contrast)
-**The Initial Challenge:** As the site grew, the varied colors, aspect ratios, and styles of the sponsor logos began clashing with the new website background. This made the sponsor section look cluttered and negatively impacted the visibility of certain partners.
-
-**The Evolution:** * Implemented a unified background container specifically for the sponsor grid to isolate it from the main page background.
-* Adjusted the contrast and applied a standardized visual treatment (e.g., grayscale/monochrome conversion on resting states, full color on hover) so all logos stand out clearly without fighting the main FEOAF color palette.
-
-**Current Implementation:**
-![Updated Sponsor Logos Grid](path/to/your/updated-sponsors.png)
+**Draft Implementation:**
+![Placeholder: Add screenshot of the drafted color palette here](path/to/draft-colors.png)
 
 
-### Phase 3: Accessibility & Polish (General Color Contrast) 🚧 *Ongoing*
-**The Current Challenge:** While the brand colors are established, an accessibility audit revealed that several text elements and interactive components (like links and smaller buttons) do not currently meet WCAG (Web Content Accessibility Guidelines) minimum contrast ratios.
+### 2. Refining Partner Visibility (Sponsors Logo Contrast) ⏳ *In Progress*
+**The Goal:** The sponsor logos currently clash with the site's background due to varied colors and styles. I am exploring ways to isolate them or apply filters so they look clean and uniform.
+**Current Tasks:**
+- [ ] Test a unified background container for the logo grid.
+- [ ] Experiment with CSS filters (e.g., grayscale on resting state, full color on hover) to improve contrast.
 
-**Current Action Items:** * Actively auditing text-to-background contrast ratios sitewide.
-* Darkening light grey text elements and adjusting specific button background shades to ensure a minimum contrast ratio of 4.5:1 for normal text.
+**Proposed Solution:**
+![Placeholder: Add screenshot of the drafted sponsor logo grid here](path/to/draft-sponsors.png)
 
-**Areas Under Review:**
-![Contrast Areas Under Review](path/to/your/current-contrast.png)
-*(Note: Final screenshots will be updated here once the sitewide audit and CSS adjustments are fully completed.)*
+
+### 3. Accessibility Audit (General Color Contrast) 🔍 *Auditing Phase*
+**The Goal:** Ensure the website meets WCAG minimum contrast ratios (4.5:1 for normal text). Some light grey text and interactive elements currently fail this standard.
+**Current Tasks:**
+- [ ] Run a sitewide audit on text-to-background contrast.
+- [ ] Document specific elements that need darkening or background adjustments.
+- [ ] Finalize the accessible text utility classes.
+
+**Areas Identified for Improvement:**
+![Placeholder: Add screenshot of contrast issues being targeted here](path/to/contrast-audit.png)
 
 ---
 
-## 🛠️ Technical Handoff Notes for Developers
-* **Global Variables:** Please ensure the root CSS file relies strictly on the updated FEOAF color palette hex codes established in Phase 1. Avoid hardcoding colors in individual components.
-* **Sponsor Logos Grid:** The updated sponsor logo grid utilizes CSS filters for the contrast adjustments. Please verify that these filters behave consistently across major browsers (Safari, Chrome, Firefox).
-* **Upcoming Accessibility Push:** For the ongoing contrast updates in Phase 3, expect a rollout of adjustments to global text utility classes and link states shortly.
+## 📝 Developer Handoff Notes (Draft)
+*(Note: These will be finalized once the design phases above are locked in.)*
+* **Global Variables:** Will need to update the root CSS file with the final FEOAF hex codes (values TBD).
+* **Sponsor Logos:** Will likely require specific CSS filter classes. Code snippets to follow.
+* **Text Utility Classes:** Expect a list of updated classes for the global stylesheet to address the contrast fixes.
