@@ -1,49 +1,49 @@
-# 🚧 [DRAFT] FEOAF Design Updates & Work-in-Progress Log
+# FEOAF Design Refresh
+
+*Note: This is just a rough scratchpad for upcoming design changes. Nothing is finalized yet!*
 
 ---
 
-## 🎯 Overview
-This is a living document tracking the ongoing design improvements for the **FEOAF** website. The current sprint focuses on establishing a cohesive color palette, fixing sponsor logo visibility, and auditing the site for accessibility (color contrast). This document will be updated with final screenshots and developer handoff notes as each phase is completed.
+## 🎨 1. Color Palette Ideas
+**The vibe right now:** The website's colors feel a bit inconsistent across different pages. We need a tighter, more unified look that fits the FEOAF brand.
+
+**Initial Thoughts:**
+* Strip it back to a strict primary, secondary, and accent color.
+* Make sure all buttons look like they belong to the same family (need standard resting, hover, and active states).
+* Maybe establish a clearer background color hierarchy (e.g., solid white for main content, very light grey for secondary sections).
+
+> **Visual Inspiration / Rough Color Swatches:**
+> ![Drop a screenshot of a color generator, inspiration site, or rough Figma board here](placeholder.jpg)
 
 ---
 
-## 🛠️ Active Design Sprints
+## 🤝 2. Fixing the Sponsor Logos (Contrast Issues)
+**The vibe right now:** The sponsor logos come in all different colors, shapes, and styles. When they sit on the main website background, the section looks super cluttered and some logos get completely lost.
 
-### 1. Color Palette Design & Standardization ⏳ *In Progress*
-**The Goal:** The current site lacks a unified color scheme. I am working on defining a strict primary, secondary, and accent color palette to standardize buttons, backgrounds, and typography.
-**Current Tasks:**
-- [ ] Define core brand hex codes.
-- [ ] Map out standard button states (default, hover, active, disabled).
-- [ ] Apply the new hierarchy to a sample page layout.
+**Ideas to test out:**
+* **Idea A:** Put all the logos inside neutral, unified background containers (like identical white cards with subtle borders).
+* **Idea B (Maybe the winner?):** Use CSS filters to make them all grayscale/monochrome by default so they blend in, but have them light up in full color when the user hovers over them.
+* **Idea C:** Add a dark overlay behind the entire sponsor section to force the logos to pop.
 
-**Draft Implementation:**
-![Placeholder: Add screenshot of the drafted color palette here](path/to/draft-colors.png)
-
-
-### 2. Refining Partner Visibility (Sponsors Logo Contrast) ⏳ *In Progress*
-**The Goal:** The sponsor logos currently clash with the site's background due to varied colors and styles. I am exploring ways to isolate them or apply filters so they look clean and uniform.
-**Current Tasks:**
-- [ ] Test a unified background container for the logo grid.
-- [ ] Experiment with CSS filters (e.g., grayscale on resting state, full color on hover) to improve contrast.
-
-**Proposed Solution:**
-![Placeholder: Add screenshot of the drafted sponsor logo grid here](path/to/draft-sponsors.png)
-
-
-### 3. Accessibility Audit (General Color Contrast) 🔍 *Auditing Phase*
-**The Goal:** Ensure the website meets WCAG minimum contrast ratios (4.5:1 for normal text). Some light grey text and interactive elements currently fail this standard.
-**Current Tasks:**
-- [ ] Run a sitewide audit on text-to-background contrast.
-- [ ] Document specific elements that need darkening or background adjustments.
-- [ ] Finalize the accessible text utility classes.
-
-**Areas Identified for Improvement:**
-![Placeholder: Add screenshot of contrast issues being targeted here](path/to/contrast-audit.png)
+> **Quick Concept / Mockup:**
+> ![Drop a quick screenshot of a grayscale test or layout idea here](placeholder.jpg)
 
 ---
 
-## 📝 Developer Handoff Notes (Draft)
-*(Note: These will be finalized once the design phases above are locked in.)*
-* **Global Variables:** Will need to update the root CSS file with the final FEOAF hex codes (values TBD).
-* **Sponsor Logos:** Will likely require specific CSS filter classes. Code snippets to follow.
-* **Text Utility Classes:** Expect a list of updated classes for the global stylesheet to address the contrast fixes.
+## 👓 3. General Color Contrast & Accessibility
+**The vibe right now:** I suspect a bunch of our text and small interactive elements might be failing basic web accessibility standards (WCAG). Light grey text is probably the biggest culprit here.
+
+**Game Plan:**
+* Run a quick contrast audit across the main pages (looking for that 4.5:1 ratio).
+* Darken the standard body text.
+* Tweak button background colors so the text inside them is actually readable for people with low vision or low-brightness screens.
+* Figure out a new standard hex code for "muted text" that doesn't disappear into the background.
+
+> **Examples of Problem Areas to Fix:**
+> ![Drop a screenshot of some hard-to-read text on the live site here as a reminder](placeholder.jpg)
+
+---
+
+## 📝 Random Notes for Later (Dev Stuff)
+* When I finalize the colors, I need to make sure the devs use CSS root variables instead of hardcoding hex values everywhere.
+* Need to look up the exact CSS code for the grayscale hover effect if we go with Idea B for the sponsors.
